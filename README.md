@@ -59,14 +59,14 @@ The ER Diagram visually represents entities and their relationships, including:
 ```sql
 SELECT Name, Rank FROM Sailors;
 ```
-**2. Retrieve the name and type of ships that are stationed at the "Pearl Harbor" home port.
+2. Retrieve the name and type of ships that are stationed at the "Pearl Harbor" home port.
 
 ```sql
 SELECT ShipName, ShipType
 FROM Ships
 WHERE HomePort = 'Pearl Harbor';
 ```
-**3.Retrieve the names of sailors who share at least one skill with the sailor having `SailorID = 1`.
+3.Retrieve the names of sailors who share at least one skill with the sailor having `SailorID = 1`.
 
 ```sql
 SELECT DISTINCT s2.Name
@@ -77,3 +77,25 @@ JOIN SailorSkill ss2
 JOIN Sailors s2 
     ON ss2.SailorID = s2.SailorID
 WHERE ss1.SailorID = 1;
+```
+## Technologies Used
+
+- **MySQL / SQLite**: For database management and storage of all entities.
+- **SQL**: For querying and managing data efficiently.
+- **ER Modeling & Relational Schema Design**: To represent entities, relationships, and database normalization.
+
+---
+
+## License
+
+This project is licensed under the MIT License.  
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contact
+
+- **Project Maintainer:** Manolina Das
+- **Email:** manolinadas2004@gmail.com
+
+
