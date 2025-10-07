@@ -58,3 +58,22 @@ The ER Diagram visually represents entities and their relationships, including:
 **1. Retrieve Name and Rank of each Sailor**
 ```sql
 SELECT Name, Rank FROM Sailors;
+```
+**2. Retrieve the name and type of ships that are stationed at the "Pearl Harbor" home port.
+
+```sql
+SELECT ShipName, ShipType
+FROM Ships
+WHERE HomePort = 'Pearl Harbor';
+```
+**3.Retrieve the names of sailors who share at least one skill with the sailor having `SailorID = 1`.
+
+```sql
+SELECT DISTINCT s2.Name
+FROM SailorSkill ss1
+JOIN SailorSkill ss2 
+    ON ss1.Skill = ss2.Skill 
+    AND ss1.SailorID <> ss2.SailorID
+JOIN Sailors s2 
+    ON ss2.SailorID = s2.SailorID
+WHERE ss1.SailorID = 1;
