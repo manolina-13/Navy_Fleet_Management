@@ -13,6 +13,9 @@ The ER Diagram visually represents entities and their relationships, including:
 * Sailors, Ships, Missions, Trainings, Equipments, MedicalRecords
 * Weak entities like MaintenanceLog
 * M:N relationships via junction tables (SailorTraining, TrainingMission)
+## ER Diagram
+
+![ER Diagram](https://github.com/manolina-13/Navy_Fleet_Management/blob/main/ER_diagram.png?raw=true)
 
 ---
 
